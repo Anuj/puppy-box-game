@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<syllabus>
+
+<pair>
+    <difficulty>easy</difficulty> 
+	<item1>cat</item1>
+	<item2>ball</item2>
+</pair>
+
+<pair>
+    <difficulty>easy</difficulty> 
+	<item1>spoon</item1>
+	<item2>elephant</item2>
+</pair>
+
+<pair>
+	<difficulty>medium</difficulty> 
+	<item1>table</item1>
+	<item2>bed</item2>
+</pair>
+
+<pair>
+	<difficulty>hard</difficulty> 
+	<item1>apple</item1>
+	<item2>orange</item2>
+</pair>
+
+</syllabus>
