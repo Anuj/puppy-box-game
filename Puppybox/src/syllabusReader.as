@@ -5,11 +5,11 @@ package
 	import flash.filesystem.FileStream;
 	
 	import mx.collections.ArrayCollection;
-	import mx.controls.Alert;
 	
 	public class syllabusReader
 	{
 		public var syllabusArray:ArrayCollection = new ArrayCollection();	
+		public var syllabusItemCounter:int;
 		
 		public function syllabusReader()
 		{
@@ -23,11 +23,15 @@ package
 			{
     			var syllabusitem: syllabusItem = new syllabusItem(sItem);
     			syllabusArray.addItem(syllabusitem);
-			}		
-			
-		}
+			}					
+			syllabusItemCounter = 0;
+		}		
 		
-				
-
+		public function getNextSyllabusItem():Object
+		{
+			var ret:Object = syllabusArray.getItemAt(syllabusItemCounter);
+			syllabusItemCounter++;
+			return ret;
+		}
 	}
 }
