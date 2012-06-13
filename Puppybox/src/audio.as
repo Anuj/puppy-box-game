@@ -16,8 +16,7 @@
 	}	
 	
 	private function playback():void
-	{
-		SoundMixer.stopAll();
+	{		
 		snd = new Sound();
 	   	snd.addEventListener(Event.OPEN, openSoundHandler);	  
 		//Alert.show(audioQueue.getItemAt(0).toString());
