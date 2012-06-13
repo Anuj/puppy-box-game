@@ -1,6 +1,7 @@
 // ActionScript file
 	import flash.events.Event;
 	import flash.net.URLRequest;
+	import flash.media.SoundMixer;
 	import mx.collections.ArrayCollection;		
 	public var audioQueue:ArrayCollection = new ArrayCollection();
 
@@ -16,6 +17,7 @@
 	
 	private function playback():void
 	{
+		SoundMixer.stopAll();
 		snd = new Sound();
 	   	snd.addEventListener(Event.OPEN, openSoundHandler);	  
 		//Alert.show(audioQueue.getItemAt(0).toString());
