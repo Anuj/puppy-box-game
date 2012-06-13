@@ -1,5 +1,6 @@
 // ActionScript file
 	   import flash.events.Event;
+	   import flash.events.MouseEvent;
 
        
 
@@ -14,7 +15,8 @@
        	}
        	addAudio("./assets/trial loops/3 what is this.mp3");
        	addAudio("./assets/silence.mp3");
-       	addAudio("./assets/trial loops/5 it is a cat.mp3");		
+       	//addAudio("./assets/trial loops/5 it is a cat.mp3");		
+       	addAudio("./assets/trial loops/it is a "+ sItem.item1 +".mp3");		
        	playIntroAudio();
        }
        
@@ -28,8 +30,9 @@
        		audioQueue.removeAll();
        	}
        	addAudio("./assets/trial loops/3 what is this.mp3");
-       	addAudio("./assets/silence.mp3");
-       	addAudio("./assets/trial loops/4 it is a ball.mp3");		
+       	addAudio("./assets/silence.mp3");       	
+       	//addAudio("./assets/trial loops/4 it is a ball.mp3");
+       	addAudio("./assets/trial loops/it is a "+ sItem.item2 +".mp3");				
        	playIntroAudio();
        }
        
@@ -77,10 +80,20 @@
        
        private function game():void
        {
+       		sItem = sReader.getNextSyllabusItem();
+        	Alert.show(sItem.item1);
+        	
        	    this.currentState = "game";
-        	obj1.source = "./assets/cat.jpg";
+        	obj1.x=0;
+        	obj1.y=0;
+        	obj2.x=647;
+        	obj2.y=0;
+        	hideImage(box);	
+        	//obj1.source = "./assets/cat.jpg";
+			obj1.source = "./assets/"+ sItem.item1 +".jpg";
 			showImage(obj1);
-			obj2.source = "./assets/ball.jpg";
+			//obj2.source = "./assets/ball.jpg";
+			obj2.source = "./assets/"+ sItem.item2 +".jpg";
 			showImage(obj2);
 			snd = new Sound(new URLRequest("./assets/trial loops/2 hmm what items do we have to choose from.mp3"));
 			snd.play();
@@ -90,7 +103,8 @@
        }
        
        private function intro():void
-       {
+       {       		
+       	
        		characterMood = "intro";
        		this.currentState = "intro";       
        		callout.source = "./assets/callout.png";

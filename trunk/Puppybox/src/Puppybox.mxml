@@ -77,11 +77,12 @@
         public var snd:Sound;
         include "interfaceRoutines.as";
         include "audio.as";
+        public var sReader:syllabusReader;
+        public var sItem:Object;
         
         private function init(event:Event):void
-        {
-        
-        	var sReader:syllabusReader = new syllabusReader();
+        {       
+        	sReader = new syllabusReader();
         	sock.addEventListener(socketConnection.DATA_CHANGED, dataHandler);
         	videoDisplay.addEventListener(VideoEvent.COMPLETE,videoComplete);
         	determineCharacterMood(characterMood);
@@ -123,6 +124,7 @@
         //If the user clicks on start go to intro
         private function onStartClick(event:Event):void
         {
+        	
         	intro();
         }
       
@@ -216,7 +218,7 @@
         	else if(cm.indexOf("start") != -1)
         	{
         		startGame();
-        	}        	
+        	}        	      	
         	else
         	{
         		characterMood = "neutral";
