@@ -174,10 +174,13 @@
         
        private function obj2AnimComplete(event:Event):void
        {
-       			obj2Move.xTo = 151;
-        	    obj2Move.yTo = 437;
-        	    obj2Move.play();	  
-        	    obj2Move.duration = 2000;  
+       	       if(obj2.x != 151)
+       	       {
+	       			obj2Move.xTo = 151;
+	        	    obj2Move.yTo = 437;
+	        	    obj2Move.play();	  
+	        	    obj2Move.duration = 2000;  
+       	       }
        }  
         
         private function dataHandler(e:Event):void

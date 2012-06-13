@@ -104,7 +104,6 @@
        
        private function intro():void
        {       		
-       	
        		characterMood = "intro";
        		this.currentState = "intro";       
        		callout.source = "./assets/callout.png";
@@ -165,7 +164,6 @@
        {
        	 		this.currentState = "box";				
 				videoDisplay.source = "./assets/headshake.mp4";
-				snd = new Sound(new URLRequest("./assets/wrong1.mp3"));
 				if(audioQueue.length>0)
 			    {
 			       		audioQueue.removeAll();
