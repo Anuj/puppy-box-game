@@ -11,10 +11,10 @@
 		</mx:State>
 		<mx:State name="game">
 			<mx:AddChild position="lastChild">
-				<mx:Image x="0" y="0" width="150" height="150" id="obj1" creationComplete="object1Created(event);"/>
+				<mx:Image x="0" y="0" width="150" height="150" id="obj1" creationComplete="object1Created(event);" horizontalAlign="center" verticalAlign="middle"/>
 			</mx:AddChild>
 			<mx:AddChild position="lastChild">
-				<mx:Image x="647" y="0" width="150" height="150" id="obj2" creationComplete="object2Created(event);"/>
+				<mx:Image x="647" y="0" width="150" height="150" id="obj2" creationComplete="object2Created(event);" horizontalAlign="center" verticalAlign="middle"/>
 			</mx:AddChild>
 			<mx:SetProperty target="{callout}" name="y" value="156"/>
 			<mx:SetProperty target="{resImage}" name="y" value="156"/>
