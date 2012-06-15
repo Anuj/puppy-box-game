@@ -90,10 +90,10 @@
         	obj2.y=0;
         	hideImage(box);	
         	//obj1.source = "./assets/cat.jpg";
-			obj1.source = "./assets/"+ sItem.item1 +".jpg";
+			obj1.source = "./assets/"+ sItem.item1 +".png";
 			showImage(obj1);
 			//obj2.source = "./assets/ball.jpg";
-			obj2.source = "./assets/"+ sItem.item2 +".jpg";
+			obj2.source = "./assets/"+ sItem.item2 +".png";
 			showImage(obj2);
 			snd = new Sound(new URLRequest("./assets/trial loops/2 hmm what items do we have to choose from.mp3"));
 			snd.play();
