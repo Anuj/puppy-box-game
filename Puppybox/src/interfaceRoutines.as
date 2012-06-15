@@ -134,8 +134,7 @@
         		
         		var myTimer1:Timer = new Timer(5000, 1);
         		myTimer1.addEventListener(TimerEvent.TIMER_COMPLETE, timerHandler);
-        		myTimer1.start();
-        		 		
+        		myTimer1.start();        		 		
 	   } 	   	   
 	   
        private function characterHappy():void
