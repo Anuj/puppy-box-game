@@ -33,7 +33,7 @@
 		</mx:State>
 		<mx:State name="box" basedOn="game">
 			<mx:AddChild position="lastChild">
-				<mx:Image x="151" y="437" width="150" height="150" id="box" creationComplete="boxCreated(event);"/>
+				<mx:Image x="130" y="399" width="202" height="189" id="box" creationComplete="boxCreated(event);" scaleContent="true"/>
 			</mx:AddChild>
 			<mx:RemoveChild target="{obj1}"/>
 			<mx:RemoveChild target="{obj2}"/>
@@ -200,10 +200,12 @@
         	else if(cm.indexOf("right") != -1)
         	{
         	    rightPrompts();	
+        	    characterMood = "intro";
         	}
         	else if(cm.indexOf("left") != -1)
         	{
         	    leftPrompts();	
+        	    characterMood = "intro";
         	}
         	else if(cm.indexOf("game") != -1)
         	{
@@ -218,7 +220,11 @@
         	else if(cm.indexOf("start") != -1)
         	{
         		startGame();
-        	}        	      	
+        	}       
+        	else if(cm.indexOf("edge") != -1)
+        	{
+        		edge();        		
+        	}      	
         	else
         	{
         		characterMood = "neutral";
@@ -248,16 +254,16 @@
 			 	videoDisplay.source = "./assets/still.mp4";	
        			break;
 			 default:
-			    var r:int = rand(1,5);
-			 	if(r>=1 && r<=3)
+			    var r:int = rand(1,7);
+			 	if(r>=1 && r<=5)
 				{
 					videoDisplay.source = "./assets/still.mp4";
 				}
-				if(r == 4)
+				if(r == 6)
 				{
 					videoDisplay.source = "./assets/loyal.mp4";
 				}
-				if(r == 5)
+				if(r == 7)
 				{
 					videoDisplay.source = "./assets/neat.mp4";
 				}
