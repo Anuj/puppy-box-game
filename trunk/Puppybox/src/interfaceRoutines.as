@@ -74,14 +74,40 @@
 		       	}
        			addAudio("./assets/applause.mp3");		
 		       	addAudio("./assets/conclusion/that was fun thank you for playing with me.mp3");
-		       	addAudio("./assets/trial loops/13 lets play again.mp3");
+		       	if(sReader.syllabusItemCounter < 9)
+		       	{
+		       		addAudio("./assets/trial loops/13 lets play again.mp3");
+		       	}
 		       	playIntroAudio();
        }
+       
+       private function edge():void
+       {
+       	  if(audioQueue.length>0)
+   		  {
+		       	audioQueue.removeAll();
+		  }
+		  var r:int = rand(1,3);
+	      if(r==1)
+	      {
+	      	addAudio("./assets/edge cases/i love this game.mp3");
+	      }
+		  else if(r==2)
+		  {
+		  	addAudio("./assets/edge cases/lets play.mp3");
+		  }
+		  else if(r==3)
+		  {
+		  	addAudio("./assets/edge cases/this is my favorite game.mp3");
+		  }       	  
+		  playIntroAudio();
+       }
+       
        
        private function game():void
        {
        		sItem = sReader.getNextSyllabusItem();
-        	Alert.show(sItem.item1); 
+        	//Alert.show(sItem.item1); 
         	determineCharacterMood("neutral");       	
        	    this.currentState = "game";
         	obj1.x=0;
