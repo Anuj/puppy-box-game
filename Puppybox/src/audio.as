@@ -48,6 +48,8 @@
 	
 	private function openSoundHandler(event:Event):void
 	{
+		//determineCharacterMood("talk");
+       	//playVideo();
 		callout.source = "./assets/callout.png";
        	showImage(callout);	
 	}

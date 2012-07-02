@@ -7,8 +7,11 @@
 	   private function leftPrompts():void
        {       	
        	this.currentState = "left";
-       	arrowleft.source = "./assets/arrow.png";
-       	showImage(arrowleft);
+       	
+       	arrowleft.source = "./assets/arrow.png";       	
+        showImage(arrowleft);
+        characterMood = "left";
+       	playVideo();
        	if(audioQueue.length>0)
        	{
        		audioQueue.removeAll();
@@ -23,8 +26,11 @@
 	   private function rightPrompts():void
        {      
        	this.currentState = "right";
+       	
        	arrowright.source = "./assets/arrow.png";
        	showImage(arrowright);
+       	characterMood = "right";
+       	playVideo();
        	if(audioQueue.length>0)
        	{
        		audioQueue.removeAll();
