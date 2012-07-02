@@ -200,16 +200,20 @@
         	else if(cm.indexOf("right") != -1)
         	{
         	    rightPrompts();	
-        	    characterMood = "intro";
+        	    characterMood = "left";
         	}
         	else if(cm.indexOf("left") != -1)
         	{
         	    leftPrompts();	
-        	    characterMood = "intro";
+        	    characterMood = "right";
         	}
         	else if(cm.indexOf("game") != -1)
         	{
         		game();
+        	}
+        	else if(cm.indexOf("talk") != -1)
+        	{
+        		characterMood = "talk";
         	}
         	else if(cm.indexOf("reveal") != -1)
         	{
@@ -247,6 +251,15 @@
 			 case "sad":
 			 	characterSad();
 				break;
+			 case "left":
+			 	videoDisplay.source = "./assets/left.mp4";
+				break;
+			 case "right":
+			 	videoDisplay.source = "./assets/right.mp4";
+				break;
+			  case "talk":
+			 	videoDisplay.source = "./assets/talk.mp4";
+				break;			
 			 case "reveal":
 			 	videoDisplay.source = "./assets/hyper.mp4";
 				break;	
@@ -297,7 +310,7 @@
         }        
         
        private function videoComplete(event:Event):void{  
-        	if(characterMood=="happy" || characterMood=="sad")
+        	if(characterMood=="happy" || characterMood=="sad" || characterMood=="left" || characterMood=="right" || characterMood == "talk")
         	{        		
         		determineCharacterMood("neutral");
         	}
