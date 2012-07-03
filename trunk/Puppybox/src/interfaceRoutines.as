@@ -148,7 +148,7 @@
        			audioQueue.removeAll();
        		}
 		    addAudio("./assets/introduction/hi my name is spot.mp3");
-		    addAudio("./assets/trial loops/0 im going to show you two items.mp3");
+		    addAudio("./assets/trial loops/0 im going to show you two things.mp3");
 		    addAudio("./assets/trial loops/1 lets begin.mp3");
 		    playIntroAudio();
        }

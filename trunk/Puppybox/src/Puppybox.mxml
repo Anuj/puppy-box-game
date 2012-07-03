@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="init(event);" currentState="start">
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="init(event);" currentState="start" viewSourceURL="srcview/index.html">
 	<mx:states>
 		<mx:State name="start">
 			<mx:RemoveChild target="{videoDisplay}"/>
@@ -189,25 +189,25 @@
         
         private function determineCharacterMood(cm:String):void
         {
-        	if(cm.indexOf("yes") !=-1 || cm.indexOf("happy") != -1)
+        	if(cm == "yes\n" || cm == "happy\n")
         	{
         		characterMood = "happy";
         	}
-        	else if(cm.indexOf("no") != -1 || cm.indexOf("sad") != -1)
+        	else if(cm == "no\n" || cm == "sad\n")
         	{
         		characterMood = "sad";
         	}
-        	else if(cm.indexOf("right") != -1)
+        	else if(cm == "right\n")
         	{
         	    rightPrompts();	
         	    characterMood = "right";
         	}
-        	else if(cm.indexOf("left") != -1)
+        	else if(cm == "left\n")
         	{
         	    leftPrompts();	
         	    characterMood = "left";
         	}
-        	else if(cm.indexOf("game") != -1)
+        	else if(cm == "game\n")
         	{
         		game();
         	}
@@ -217,14 +217,13 @@
         	}
         	else if(cm.indexOf("reveal") != -1)
         	{
-        	    //Alert.show(cm.substring(cm.indexOf(" "),cm.length-1));	
         	    characterMood = "reveal";
         	    reveal(cm.substring(cm.indexOf(" ")+1,cm.length-1));
         	}
-        	else if(cm.indexOf("start") != -1)
+        	else if(cm == "start\n")
         	{
         		startGame();
-        	}       
+        	}         
         	else if(cm.indexOf("edge") != -1)
         	{
         		edge();        		
