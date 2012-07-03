@@ -66,6 +66,8 @@
 			    
        }
        
+       
+       
        private function revealHandler(event:Event):void
        {
        			
