@@ -135,11 +135,9 @@
         		obj2Move.xTo = 100;
         		obj2Move.yTo = 300;
         		obj1Move.play();
-        		obj2Move.play();
-        		
+        		obj2Move.play();        		
         		obj1Move.addEventListener(EffectEvent.EFFECT_END, obj1AnimComplete);        	    
-        		obj2Move.addEventListener(EffectEvent.EFFECT_END, obj2AnimComplete);
-        		
+        		obj2Move.addEventListener(EffectEvent.EFFECT_END, obj2AnimComplete);        		
 	   }
        
        private function obj1AnimComplete(event:Event):void
