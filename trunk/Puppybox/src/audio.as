@@ -17,6 +17,7 @@
 	
 	private function playback():void
 	{		
+		SoundMixer.stopAll();
 		snd = new Sound();
 	   	snd.addEventListener(Event.OPEN, openSoundHandler);	  
 		//Alert.show(audioQueue.getItemAt(0).toString());
@@ -50,7 +51,6 @@
 	{
 		//determineCharacterMood("talk");
        	//playVideo();
-       	SoundMixer.stopAll();
-		callout.source = "./assets/callout.png";
+       	callout.source = "./assets/callout.png";
        	showImage(callout);	
 	}
