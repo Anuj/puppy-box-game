@@ -16,10 +16,10 @@
        	{
        		audioQueue.removeAll();
        	}
-       	addAudio("./assets/trial loops/3 what is this.mp3");
+       	addAudio("./assets/trial loops/what is this.mp3");
        	addAudio("./assets/silence.mp3");
        	//addAudio("./assets/trial loops/5 it is a cat.mp3");		
-       	addAudio("./assets/trial loops/it is a "+ sItem.item1 +".mp3");		
+       	addAudio("./assets/pairs/it is a "+ sItem.item1 +".mp3");		
        	playIntroAudio();
        }
        
@@ -35,10 +35,10 @@
        	{
        		audioQueue.removeAll();
        	}
-       	addAudio("./assets/trial loops/3 what is this.mp3");
+       	addAudio("./assets/trial loops/what is this.mp3");
        	addAudio("./assets/silence.mp3");       	
        	//addAudio("./assets/trial loops/4 it is a ball.mp3");
-       	addAudio("./assets/trial loops/it is a "+ sItem.item2 +".mp3");				
+       	addAudio("./assets/pairs/it is a "+ sItem.item2 +".mp3");				
        	playIntroAudio();
        }
        
@@ -57,7 +57,7 @@
 		       	{
 		       		audioQueue.removeAll();
 		       	}
-		       	addAudio("./assets/trial loops/12 lets open up the box and see.mp3");
+		       	addAudio("./assets/trial loops/thats a good guess.mp3");
 		       	playIntroAudio();
 		       	var revealTimer:Timer = new Timer(6000, 1);
         		revealTimer.addEventListener(TimerEvent.TIMER_COMPLETE, revealHandler);
@@ -81,10 +81,10 @@
 		       		audioQueue.removeAll();
 		       	}
        			addAudio("./assets/applause.mp3");		
-		       	addAudio("./assets/conclusion/that was fun thank you for playing with me.mp3");
-		       	if(sReader.syllabusItemCounter < 9)
+		       	addAudio("./assets/conclusion/thank you.mp3");
+		       	if(sReader.syllabusItemCounter < 7)
 		       	{
-		       		addAudio("./assets/trial loops/13 lets play again.mp3");
+		       		addAudio("./assets/trial loops/lets play again.mp3");
 		       	}
 		       	playIntroAudio();
        }
@@ -106,7 +106,7 @@
 		  }
 		  else if(r==3)
 		  {
-		  	addAudio("./assets/edge cases/this is my favorite game.mp3");
+		  	addAudio("./assets/edge cases/i like playing with you.mp3");
 		  }       	  
 		  playIntroAudio();
        }
@@ -129,7 +129,7 @@
 			//obj2.source = "./assets/ball.jpg";
 			obj2.source = "./assets/images/"+ sItem.item2 +".jpeg";
 			showImage(obj2);
-			snd = new Sound(new URLRequest("./assets/trial loops/2 hmm what items do we have to choose from.mp3"));
+			snd = new Sound(new URLRequest("./assets/trial loops/what items do we have to choose from.mp3"));
 			snd.play();
 			snd.addEventListener(Event.OPEN, openSoundHandler);
 		    var channel:SoundChannel = snd.play();
@@ -148,8 +148,8 @@
        			audioQueue.removeAll();
        		}
 		    addAudio("./assets/introduction/hi my name is spot.mp3");
-		    addAudio("./assets/trial loops/0 im going to show you two things.mp3");
-		    addAudio("./assets/trial loops/1 lets begin.mp3");
+		    addAudio("./assets/introduction/i will show you two things.mp3");
+		    addAudio("./assets/trial loops/lets begin.mp3");
 		    playIntroAudio();
        }
      
@@ -159,7 +159,7 @@
 		       	{
 		       		audioQueue.removeAll();
 		       	}
-       	        addAudio("./assets/trial loops/6 i am going to choose one of these things.mp3");
+       	        addAudio("./assets/trial loops/i am going to choose.mp3");
 		    	playIntroAudio();
 				hideImage(arrowleft);
         		hideImage(arrowright);
@@ -188,8 +188,8 @@
 			    {
 			       		audioQueue.removeAll();
 			    }
-			   addAudio("./assets/trial loops/9 yes great question.mp3");
-		       addAudio("./assets/trial loops/11 ask another question or just guess.mp3");
+			   addAudio("./assets/trial loops/yes it does.mp3");
+		       addAudio("./assets/trial loops/ask me a question.mp3");
 		       playIntroAudio();
        }
        
@@ -201,7 +201,7 @@
 			    {
 			       		audioQueue.removeAll();
 			    }
-				addAudio("./assets/trial loops/10 no keep going doing well.mp3");
-		    	addAudio("./assets/trial loops/11 ask another question or just guess.mp3");
+				addAudio("./assets/trial loops/no but keep going.mp3");
+		    	addAudio("./assets/trial loops/ask me a question.mp3");
 		    	playIntroAudio();				
        }

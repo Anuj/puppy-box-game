@@ -50,6 +50,7 @@
 	{
 		//determineCharacterMood("talk");
        	//playVideo();
+       	SoundMixer.stopAll();
 		callout.source = "./assets/callout.png";
        	showImage(callout);	
 	}

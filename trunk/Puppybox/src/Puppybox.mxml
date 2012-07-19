@@ -124,6 +124,7 @@
         private function onStartClick(event:Event):void
         {        	
         	intro();
+        	this.stage.displayState = StageDisplayState.FULL_SCREEN;
         }
       
       
@@ -157,8 +158,8 @@
 			       	{
 			       		audioQueue.removeAll();
 			       	}
-        		    addAudio("./assets/trial loops/7 ive hidden one of the things in the box.mp3");
-        		    addAudio("/assets/trial loops/8 its your turn ask me a question or guess.mp3");
+        		    addAudio("./assets/trial loops/ive hidden one of the things.mp3");
+        		    addAudio("./assets/trial loops/its your turn to figure out.mp3");
         		    playIntroAudio();
         	 		this.currentState = "box";
 	        		box.source = "./assets/box.png";
