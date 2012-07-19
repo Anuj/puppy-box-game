@@ -6,40 +6,40 @@
 
 	   private function leftPrompts():void
        {       	
-       	this.currentState = "left";
-       	
-       	arrowleft.source = "./assets/arrow.png";       	
-        showImage(arrowleft);
-        characterMood = "left";
-       	playVideo();
-       	if(audioQueue.length>0)
-       	{
-       		audioQueue.removeAll();
-       	}
-       	addAudio("./assets/trial loops/what is this.mp3");
-       	addAudio("./assets/silence.mp3");
-       	//addAudio("./assets/trial loops/5 it is a cat.mp3");		
-       	addAudio("./assets/pairs/it is a "+ sItem.item1 +".mp3");		
-       	playIntroAudio();
+	       	this.currentState = "left";
+	       	
+	       	arrowleft.source = "./assets/arrow.png";       	
+	        showImage(arrowleft);
+	        characterMood = "left";
+	       	playVideo();
+	       	if(audioQueue.length>0)
+	       	{
+	       		audioQueue.removeAll();
+	       	}
+	       	addAudio("./assets/trial loops/what is this.mp3");
+	       	addAudio("./assets/silence.mp3");
+	       	//addAudio("./assets/trial loops/5 it is a cat.mp3");		
+	       	addAudio("./assets/pairs/it is a "+ sItem.item1 +".mp3");		
+	       	playIntroAudio();
        }
        
 	   private function rightPrompts():void
        {      
-       	this.currentState = "right";
-       	
-       	arrowright.source = "./assets/arrow.png";
-       	showImage(arrowright);
-       	characterMood = "right";
-       	playVideo();
-       	if(audioQueue.length>0)
-       	{
-       		audioQueue.removeAll();
-       	}
-       	addAudio("./assets/trial loops/what is this.mp3");
-       	addAudio("./assets/silence.mp3");       	
-       	//addAudio("./assets/trial loops/4 it is a ball.mp3");
-       	addAudio("./assets/pairs/it is a "+ sItem.item2 +".mp3");				
-       	playIntroAudio();
+	       	this.currentState = "right";
+	       	
+	       	arrowright.source = "./assets/arrow.png";
+	       	showImage(arrowright);
+	       	characterMood = "right";
+	       	playVideo();
+	       	if(audioQueue.length>0)
+	       	{
+	       		audioQueue.removeAll();
+	       	}
+	       	addAudio("./assets/trial loops/what is this.mp3");
+	       	addAudio("./assets/silence.mp3");       	
+	       	//addAudio("./assets/trial loops/4 it is a ball.mp3");
+	       	addAudio("./assets/pairs/it is a "+ sItem.item2 +".mp3");				
+	       	playIntroAudio();
        }
        
        public var boxSource:String = "";
